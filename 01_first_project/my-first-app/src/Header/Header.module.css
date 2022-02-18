@@ -1,0 +1,5 @@
+.header {
+    background-color: #1D94CF;
+    grid-area: header;
+    border-radius: 0 0 0.8em 0.8em;
+}

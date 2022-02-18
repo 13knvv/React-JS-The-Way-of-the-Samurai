@@ -1,20 +1,13 @@
 .App {
-  text-align: center;
+    
+    margin: 0 auto;
+    max-width: 1400px;
+    display: grid;
+    grid-template: 80px auto 80px / 25% 75%;
+    grid-template-areas: 'header header'
+                         'sidebar main'
+                         'footer footer' ;
+    grid-gap: 7px;
+    
 }
 
-
-
-.App-link {
-  color: #61dafb;
-}
-
-.App-ul {
-    color: green;
-    font-size: 2em;
-    list-style: none;
-}
-
-img {
-    width: 100px;
-    height: 100px;
-}

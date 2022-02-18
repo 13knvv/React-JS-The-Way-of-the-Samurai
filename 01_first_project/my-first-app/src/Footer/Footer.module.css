@@ -1,0 +1,5 @@
+.footer {
+    background-color: rgb(253, 253, 253);
+    grid-area: footer;
+    border-radius:  0.8em 0.8em 0 0;
+}

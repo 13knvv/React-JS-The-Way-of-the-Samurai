@@ -1,0 +1,5 @@
+.sidebar {
+    background-color: rgb(255, 255, 255);
+    grid-area: sidebar;
+    border-radius: 0.8em;
+}

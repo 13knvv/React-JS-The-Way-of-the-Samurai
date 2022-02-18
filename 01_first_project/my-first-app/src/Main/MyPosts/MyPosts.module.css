@@ -1,0 +1,9 @@
+.MyPosts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.MyPosts *+* {
+    margin-top: 1em;
+}

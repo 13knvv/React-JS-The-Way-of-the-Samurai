@@ -1,9 +1,9 @@
-import classes from './Footer.module.css'
+import c from './Footer.module.css'
 
 function Footer() {
     return (
-        <footer className={classes.footer}>
-        
+        <footer className={c.footer}>
+            Все права Защищены :)
         </footer>
     )
 }

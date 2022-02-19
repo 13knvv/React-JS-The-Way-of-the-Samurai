@@ -3,3 +3,23 @@
     grid-area: sidebar;
     border-radius: 0.8em;
 }
+
+.sidebar ul {
+    list-style: none;
+}
+
+.navLink,
+.navLink_Active {
+    text-decoration: none;
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+.navLink  {
+    color: black;
+    
+}
+
+.navLink_Active  {
+    color: red;
+}

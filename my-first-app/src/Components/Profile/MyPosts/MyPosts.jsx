@@ -1,9 +1,9 @@
 import MyPost from './MyPost/MyPost'
-import c from './MyPosts.module.css'
+import s from './MyPosts.module.css'
 
 function MyPosts(props) {
     return (
-        <div className={c.MyPosts}>
+        <div className={s.MyPosts}>
             <textarea></textarea>
             <button type="submit">Add post</button>
              <MyPost fullName='Mike Knyazev' massege='lylylylyl'/>

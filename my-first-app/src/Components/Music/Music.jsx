@@ -1,4 +1,4 @@
-import c from './Music.module.css'
+import s from './Music.module.css'
 
 function Music() {
     return (

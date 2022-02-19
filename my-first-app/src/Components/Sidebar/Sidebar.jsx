@@ -1,14 +1,15 @@
-import c from './Sidebar.module.css'
+import { NavLink } from 'react-router-dom'
+import s from './Sidebar.module.css'
 
 function Sidebar() {
     return (
-        <div className={c.sidebar}>
+        <div className={s.sidebar}>
             <ul>
-                <li><a href="/profile">Profile</a></li>
-                <li><a href="/messages">Messages</a></li>
-                <li><a href="/news">News</a></li>
-                <li><a href="/music">Music</a></li>
-                <li><a href="/settings">Settings</a></li>
+                <li><NavLink className = { navData => navData.isActive ? s.navLink_Active : s.navLink } to="/profile">Profile</NavLink></li>
+                <li><NavLink className = { navData => navData.isActive ? s.navLink_Active  : s.navLink } to="/messages">Messages</NavLink></li>
+                <li><NavLink className = { navData => navData.isActive ? s.navLink_Active : s.navLink } to="/news">News</NavLink></li>
+                <li><NavLink className = { navData => navData.isActive ? s.navLink_Active : s.navLink } to="/music">Music</NavLink></li>
+                <li><NavLink className = { navData => navData.isActive ? s.navLink_Active : s.navLink } to="/settings">Settings</NavLink></li>
             </ul>
         </div>
     )

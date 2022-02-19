@@ -1,0 +1,20 @@
+.navLink_message_Active,
+.navLink_message {
+    text-decoration: none;
+    color: black;
+}
+
+.navLink_message_Active .dialog {
+    background-color: rgba(132, 199, 243, 0.596);
+    position: relative;
+    left:  -1em;
+
+    transition: all 500ms;
+}
+
+.dialog {
+    box-shadow: 0px 0px 8px 4px rgba(34, 60, 80, 0.2);
+    padding: 1em;
+    margin: 1em;
+    border-radius: 0.6em;
+}

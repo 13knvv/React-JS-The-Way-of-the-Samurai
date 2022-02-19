@@ -1,2 +1,33 @@
+.dialogs__wrapp {
+    display: flex;
+    justify-content: space-between;
+}
 
+.dialogs {
+    width: 30%;
+}
 
+.dialogs__item {
+    box-shadow: 0px 0px 8px 4px rgba(34, 60, 80, 0.2);
+    padding: 1em;
+    margin: 1em;
+    border-radius: 0.6em;
+}
+
+.messages {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.messages__item {
+    width: 80%;
+    padding: 1em;
+    margin: 1em;
+    border-radius:  0.6em;
+    box-shadow: 0px 0px 8px 4px rgba(34, 60, 80, 0.2);
+}
+
+.messages__item.messages__item_right{
+    align-self: flex-end;
+}

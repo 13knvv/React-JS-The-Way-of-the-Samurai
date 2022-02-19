@@ -1,5 +1,5 @@
 import AboutMe from './AboutMe/AboutMe'
-import c from './Profile.module.css'
+import s from './Profile.module.css'
 import MyPosts from './MyPosts/MyPosts'
 
 function Profile() {

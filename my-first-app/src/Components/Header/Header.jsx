@@ -1,8 +1,8 @@
-import c from './Header.module.css'
+import s from './Header.module.css'
 
 function Header() {
     return (
-        <header className={c.header}>
+        <header className={s.header}>
             
         </header>
     )

@@ -17,6 +17,7 @@ function App() {
                 <Sidebar />
                 <main className='App__main'>
                     <Routes>
+                        <Route path='/' element={<Profile />} />
                         <Route path='/profile' element={<Profile />} />
                         <Route path='/messages/*' element={<Dialogs />} />
                         <Route path='/news' element={<News />} />

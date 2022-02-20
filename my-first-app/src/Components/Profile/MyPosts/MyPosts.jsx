@@ -4,7 +4,7 @@ import s from './MyPosts.module.css'
 function MyPosts(props) {
     return (
         <div className={s.MyPosts}>
-            <textarea></textarea>
+            <textarea className={s.MyPosts__textarea} ></textarea>
             <button type="submit">Add post</button>
              <MyPost fullName='Mike Knyazev' massege='lylylylyl'/>
              <MyPost fullName='Mike Knyazev' massege='lylylylyl'/> 

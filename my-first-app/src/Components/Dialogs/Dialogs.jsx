@@ -18,7 +18,7 @@ function Dialogs(props) {
         <div className={s.dialogs__wrapp}>
             <div className={s.messages}>
                 {messages}
-                <WriteMessage dispatch={props.dispatch} newMessageBody={props.state.newMessageBody}/>
+                <WriteMessage dispatch={props.dispatch} state={props.state}/>
             </div>
             <div className={s.dialogs}>
                 {dialog}

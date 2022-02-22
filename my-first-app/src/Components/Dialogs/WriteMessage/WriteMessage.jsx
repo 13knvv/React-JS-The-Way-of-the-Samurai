@@ -14,11 +14,11 @@ function WriteMessage(props) {
 
     return (
         <div>
-            <textarea value={props.newMessageBody} 
+            <textarea value={props.state.dialogsPage.newMessageBody} 
                     ref={refNewMessage}
                     onChange={onNewMessageChange}></textarea>
             <br/>
-            <button onClick={onSendMessage}>Send</button>
+            <button type="submit" onClick={onSendMessage}>Send</button>
         </div>
     )
 }

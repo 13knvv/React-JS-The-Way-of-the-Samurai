@@ -25,15 +25,13 @@ const store = {
                 { name: 'Tutuska', id: '4', lastmessage: 'last message...' },
                 { name: 'Franklin', id: '5', lastmessage: 'last message...' },
             ],
-
             messages: [
                 { text: 'how are you', myMessage: true },
                 { text: 'how are you!!', myMessage: false },
                 { text: 'how are you!!', myMessage: false },
                 { text: 'how are you', myMessage: true }
             ],
-
-            newMessageBody: 'q'
+            newMessageBody: ''
         }
     },
 

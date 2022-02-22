@@ -7,6 +7,7 @@ function WriteMessage(props) {
     let onSendMessage = () => {
         props.dispatch(sendMessageCreator())
     }
+
     let onNewMessageChange = (e) => {
         let body = e.target.value
         props.dispatch(updateNewMessageBodyCreator(body))

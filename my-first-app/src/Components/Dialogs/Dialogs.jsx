@@ -4,7 +4,7 @@ import Dialog from './Dialog/Dialog'
 import WriteMessage from './WriteMessage/WriteMessage'
 
 function Dialogs(props) {
-  
+    
     let messages = props.state.dialogsPage.messages.map((m, i) => {
         return <Message message={m.text} 
                         myMessage={m.myMessage} key={i} />

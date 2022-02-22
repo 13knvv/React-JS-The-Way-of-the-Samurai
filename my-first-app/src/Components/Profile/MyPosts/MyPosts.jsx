@@ -13,12 +13,13 @@ function MyPosts(props) {
         let body = e.target.value
         props.dispatch(updateNewPostTextActionCreator(body))
     }
-
+    
+        
     let posts = props.state.profilePage.posts.map((p, i) => {
         return <MyPost fullName={p.fullName} 
                         message={p.message} 
                         key={i}  />
-    })
+    }).reverse()
 
 
     return (

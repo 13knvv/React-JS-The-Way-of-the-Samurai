@@ -6,7 +6,7 @@ function MyPost(props) {
             <div className={s.MyPost__avatar}></div>
             <div className={s.MyPost__post} >
                 <h4 className={s.MyPost__title} >{props.fullName}</h4>
-                <p>{props.massege}</p>
+                <p>{props.message}</p>
             </div>
             
         </div>

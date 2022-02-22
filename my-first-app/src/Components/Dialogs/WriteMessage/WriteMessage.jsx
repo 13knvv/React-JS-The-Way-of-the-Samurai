@@ -1,18 +1,24 @@
 import React from 'react'
+import { sendMessageCreator, updateNewMessageBodyCreator } from '../../../redux/state'
 import s from './WriteMessage.module.css'
 
-function WriteMessage() {
+function WriteMessage(props) {
     let refNewMessage = React.createRef()
-    let sendMessage = () => {
-        let newMessage = refNewMessage.current.value
-        alert(newMessage)
+    let onSendMessage = () => {
+        props.dispatch(sendMessageCreator())
+    }
+    let onNewMessageChange = (e) => {
+        let body = e.target.value
+        props.dispatch(updateNewMessageBodyCreator(body))
     }
 
     return (
         <div>
-            <textarea ref={refNewMessage}></textarea>
+            <textarea value={props.newMessageBody} 
+                    ref={refNewMessage}
+                    onChange={onNewMessageChange}></textarea>
             <br/>
-            <button onClick={sendMessage}>Send</button>
+            <button onClick={onSendMessage}>Send</button>
         </div>
     )
 }

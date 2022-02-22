@@ -1,32 +1,33 @@
 import React from 'react'
+import { addPostActionCreator, updateNewPostTextActionCreator } from '../../../redux/state'
 import MyPost from './MyPost/MyPost'
 import s from './MyPosts.module.css'
 
 function MyPosts(props) {
-    let postsData = [
-            {fullName: 'Mike Knyazev', massege: 'lylypplylyl'},
-            {fullName: 'Mike Knyazev', massege: 'lylyooooolylyl'},
-            {fullName: 'Mike Knyazev', massege: 'lylylylppppyl'},
-            {fullName: 'Mike Knyazev', massege: 'lyl;;;ylylyl'}
-        ]
-    
+ 
+    let newPost = React.createRef()
+    let onAddPost = () => {
+        props.dispatch(addPostActionCreator())
+    }
+    let onNewPostChange = (e) => {
+        let body = e.target.value
+        props.dispatch(updateNewPostTextActionCreator(body))
+    }
 
-    let posts = postsData.map((p, i) => {
+    let posts = props.state.profilePage.posts.map((p, i) => {
         return <MyPost fullName={p.fullName} 
-                        massege={p.massege} 
+                        message={p.message} 
                         key={i}  />
     })
 
-    let newPost = React.createRef()
-    let addPost = () => {
-        let text = newPost.current.value
-        alert(text)
-    }
 
     return (
         <div className={s.MyPosts}>
-            <textarea ref={newPost} className={s.MyPosts__textarea} ></textarea>
-            <button type="submit" onClick={addPost}>Add post</button>
+            <textarea value={props.state.profilePage.newPostText}
+                        ref={newPost} 
+                        className={s.MyPosts__textarea} 
+                        onChange={onNewPostChange}></textarea>
+            <button type="submit" onClick={onAddPost}>Add post</button>
                 {posts} 
         </div>
     )

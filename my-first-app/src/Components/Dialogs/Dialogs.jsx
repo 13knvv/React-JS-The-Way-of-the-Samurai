@@ -5,11 +5,11 @@ import WriteMessage from './WriteMessage/WriteMessage'
 
 function Dialogs(props) {
     
-    let messages = props.state.dialogsPage.messages.map((m, i) => {
+    let messages = props.messages.map((m, i) => {
         return <Message message={m.text} 
                         myMessage={m.myMessage} key={i} />
     })
-    let dialog = props.state.dialogsPage.dialogs.map((d, i) => {
+    let dialog = props.dialogs.map((d, i) => {
         return <Dialog name={d.name} id={d.id} key={i}/>
     })
 
@@ -18,7 +18,9 @@ function Dialogs(props) {
         <div className={s.dialogs__wrapp}>
             <div className={s.messages}>
                 {messages}
-                <WriteMessage dispatch={props.dispatch} state={props.state}/>
+                <WriteMessage newMessageChange={props.newMessageChange}
+                              sendMessage={props.sendMessage}
+                              newMessageBody={props.newMessageBody} />
             </div>
             <div className={s.dialogs}>
                 {dialog}

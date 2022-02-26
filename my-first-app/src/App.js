@@ -19,7 +19,7 @@ function App(props) {
                     <Routes>
                         <Route path='/' element={<Profile store={props.store} />} />
                         <Route path='/profile' element={<Profile store={props.store} />} />
-                        <Route path='/messages/*' element={<DialogsContainer store={props.store} dispatch={props.dispatch} state={props.state}/>} />
+                        <Route path='/messages/*' element={<DialogsContainer store={props.store} />} />
                         <Route path='/news' element={<News />} />
                         <Route path='/music' element={<Music />} />
                         <Route path='/settings' element={<Settings />} />

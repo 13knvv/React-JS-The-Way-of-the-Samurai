@@ -5,11 +5,11 @@ import WriteMessage from './WriteMessage/WriteMessage'
 
 function Dialogs(props) {
     
-    let messages = props.messages.map((m, i) => {
+    let messages = props.dialogsPage.messages.map((m, i) => {
         return <Message message={m.text} 
                         myMessage={m.myMessage} key={i} />
     })
-    let dialog = props.dialogs.map((d, i) => {
+    let dialog = props.dialogsPage.dialogs.map((d, i) => {
         return <Dialog name={d.name} id={d.id} key={i}/>
     })
 

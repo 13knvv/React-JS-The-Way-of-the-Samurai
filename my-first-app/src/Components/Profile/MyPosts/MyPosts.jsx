@@ -1,21 +1,22 @@
 import React from 'react'
-import { addPostActionCreator, updateNewPostTextActionCreator } from '../../../redux/state'
 import MyPost from './MyPost/MyPost'
 import s from './MyPosts.module.css'
 
 function MyPosts(props) {
  
     let newPost = React.createRef()
+
     let onAddPost = () => {
-        props.dispatch(addPostActionCreator())
+        props.addPost()
     }
+
     let onNewPostChange = (e) => {
         let body = e.target.value
-        props.dispatch(updateNewPostTextActionCreator(body))
+        props.updateNewPostText(body)
     }
     
-        
-    let posts = props.state.profilePage.posts.map((p, i) => {
+       
+    let posts = props.posts.map((p, i) => {
         return <MyPost fullName={p.fullName} 
                         message={p.message} 
                         key={i}  />
@@ -24,7 +25,7 @@ function MyPosts(props) {
 
     return (
         <div className={s.MyPosts}>
-            <textarea value={props.state.profilePage.newPostText}
+            <textarea value={props.newPostText}
                         ref={newPost} 
                         className={s.MyPosts__textarea} 
                         onChange={onNewPostChange}></textarea>

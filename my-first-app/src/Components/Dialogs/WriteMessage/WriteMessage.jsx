@@ -14,7 +14,7 @@ function WriteMessage(props) {
 
     return (
         <div>
-            <textarea value={props.newMessageBody} 
+            <textarea value={props.newMessageBody}
                     ref={refNewMessage}
                     onChange={onNewMessageChange}></textarea>
             <br/>

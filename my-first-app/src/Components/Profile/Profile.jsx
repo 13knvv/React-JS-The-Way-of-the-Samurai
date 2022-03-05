@@ -7,7 +7,7 @@ function Profile(props) {
     return (
         <div>
             <AboutMe fuulName='Mike Knyazev' age='30' sity='Los Angeles' />
-            <MyPostsContainer store={props.store} />
+            <MyPostsContainer />
         </div>
 
 

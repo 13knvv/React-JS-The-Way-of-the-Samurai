@@ -10,9 +10,9 @@ function MyPosts(props) {
         props.addPost()
     }
 
-    let onNewPostChange = (e) => {
-        let body = e.target.value
-        props.updateNewPostText(body)
+    let onPostChange = () => {
+        let text = newPost.current.value
+        props.updateNewPostText(text)
     }
     
        
@@ -28,7 +28,7 @@ function MyPosts(props) {
             <textarea value={props.newPostText}
                         ref={newPost} 
                         className={s.MyPosts__textarea} 
-                        onChange={onNewPostChange}></textarea>
+                        onChange={onPostChange}></textarea>
             <button type="submit" onClick={onAddPost}>Add post</button>
                 {posts} 
         </div>

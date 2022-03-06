@@ -1,0 +1,40 @@
+.user {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    box-shadow: 0px 0px 8px 4px rgba(34, 60, 80, 0.2);
+    margin: 1.5em;
+    border-radius: 0.6em;
+}
+.user:hover {
+    box-shadow: 0px 0px 8px 8px rgba(34, 60, 80, 0.2);
+    transform: scaleX(1.005);
+}
+
+.user__photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 2em;
+}
+
+.user__info {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+}
+.user__img {
+    
+    width: 100px;
+    height: 100px
+}
+
+.user__fullName {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 0.6em;
+}
+
+.user__location {
+    width: 15%;
+}

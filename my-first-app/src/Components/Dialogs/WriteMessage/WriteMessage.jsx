@@ -9,6 +9,7 @@ function WriteMessage(props) {
 
     let onNewMessageChange = (e) => {
         let body = e.target.value
+        console.log(body)
         props.newMessageChange(body)
     }
 

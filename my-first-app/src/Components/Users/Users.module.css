@@ -38,3 +38,7 @@
 .user__location {
     width: 15%;
 }
+
+.user__btnPage_active {
+    font-weight: 800;
+}

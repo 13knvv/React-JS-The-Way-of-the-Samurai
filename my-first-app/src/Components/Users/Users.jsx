@@ -19,7 +19,7 @@ const Users = (props) => {
                 props.users.map((u, i) => {
                     return <div className={s.user} key={i}>
                             <div className={s.user__photo} >
-                                <NavLink to={'/profile/' + 2}>
+                                <NavLink to={`/profile/${u.id}`}>
                                     <div>
                                         <img className={s.user__img} src={u.photos.small != null ? u.photos.small : userPhotoInitial} />
                                     </div>
@@ -33,7 +33,7 @@ const Users = (props) => {
                             </div>
                             <div className={s.user__info}>
                                 <div>
-                                    <NavLink className={s.user__navLink }to={'/profile/' + 2}>
+                                    <NavLink className={s.user__navLink }to={`/profile/${u.id}`}>
                                         <div className={s.user__fullName} >{u.name}</div>
                                     </NavLink>
                                     <div>{u.status}</div>

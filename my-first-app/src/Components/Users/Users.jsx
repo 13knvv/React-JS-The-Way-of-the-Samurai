@@ -1,5 +1,6 @@
 import s from './Users.module.css'
 import userPhotoInitial from '../../assets/images/userPhotoInitial.png'
+import { NavLink } from 'react-router-dom'
 
 
 
@@ -12,33 +13,39 @@ const Users = (props) => {
     }
 
     return (
-        
+
         <div>
             {
                 props.users.map((u, i) => {
                     return <div className={s.user} key={i}>
-                        <div className={s.user__photo} >
-                            <div>
-                                <img className={s.user__img} src={u.photos.small != null ? u.photos.small : userPhotoInitial} />
-                            </div>
-                            <div>
-                                {u.followed
-                                    ? (<button onClick={() => { props.unfollow(u.id) }}>Unfollow</button>)
-                                    : (<button onClick={() => { props.follow(u.id) }}>Follow</button>)}
+                            <div className={s.user__photo} >
+                                <NavLink to={'/profile/' + 2}>
+                                    <div>
+                                        <img className={s.user__img} src={u.photos.small != null ? u.photos.small : userPhotoInitial} />
+                                    </div>
+                                </NavLink>
+                                <div>
+                                    {u.followed
+                                        ? (<button onClick={() => { props.unfollow(u.id) }}>Unfollow</button>)
+                                        : (<button onClick={() => { props.follow(u.id) }}>Follow</button>)}
 
+                                </div>
+                            </div>
+                            <div className={s.user__info}>
+                                <div>
+                                    <NavLink className={s.user__navLink }to={'/profile/' + 2}>
+                                        <div className={s.user__fullName} >{u.name}</div>
+                                    </NavLink>
+                                    <div>{u.status}</div>
+                                </div>
+                                <div className={s.user__location} >
+                                    <div>{'California'}</div>
+                                    <div>{'Los Angeles'}</div>
+                                </div>
                             </div>
                         </div>
-                        <div className={s.user__info}>
-                            <div>
-                                <div className={s.user__fullName} >{u.name}</div>
-                                <div>{u.status}</div>
-                            </div>
-                            <div className={s.user__location} >
-                                <div>{'California'}</div>
-                                <div>{'Los Angeles'}</div>
-                            </div>
-                        </div>
-                    </div>
+                    
+                    
                 })
             }
 

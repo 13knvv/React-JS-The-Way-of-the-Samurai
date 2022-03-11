@@ -32,7 +32,7 @@
 .user__fullName {
     font-size: 1.2em;
     font-weight: 600;
-    margin-bottom: 0.6em;
+    margin-bottom: 0.6em;  
 }
 
 .user__location {
@@ -41,4 +41,9 @@
 
 .user__btnPage_active {
     font-weight: 800;
+}
+
+.user__navLink {
+    text-decoration: none;
+    color: black;
 }

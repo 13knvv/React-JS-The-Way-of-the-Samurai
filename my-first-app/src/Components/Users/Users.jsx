@@ -12,14 +12,8 @@ const Users = (props) => {
     }
 
     return (
+        
         <div>
-            {
-                pages.map((i, index) => {
-                    return <button key={index} className={props.currentPage === i ? s.user__btnPage_active : ''}
-                        onClick={() => props.onPageChangeed(i)}>{i}</button>
-                })
-            }
-
             {
                 props.users.map((u, i) => {
                     return <div className={s.user} key={i}>
@@ -45,6 +39,13 @@ const Users = (props) => {
                             </div>
                         </div>
                     </div>
+                })
+            }
+
+            {
+                pages.map((i, index) => {
+                    return <button key={index} className={props.currentPage === i ? s.user__btnPage_active : ''}
+                        onClick={() => props.onPageChangeed(i)}>{i}</button>
                 })
             }
         </div>

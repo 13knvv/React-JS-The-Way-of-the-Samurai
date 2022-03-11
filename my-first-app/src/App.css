@@ -12,6 +12,7 @@
 }
 
 .App__main {
+    position: relative;
     background-color: rgb(255, 255, 255);
     grid-area: main;
     border-radius: 0.8em;

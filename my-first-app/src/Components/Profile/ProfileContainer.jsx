@@ -30,8 +30,8 @@ let mapStateToProps = (state) => {
 }
 
 const ProfileURLMatch = (props) => {
-    const match = useMatch('/profile/:userId/');
-    return <ProfileContainer {...props} match={match} />;
+    const match = useMatch('/profile/:userId/')
+    return <ProfileContainer {...props} match={match} />
   }
 
 export default connect(mapStateToProps, {

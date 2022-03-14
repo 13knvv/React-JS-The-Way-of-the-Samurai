@@ -1,5 +1,4 @@
 import './App.css'
-import Header from './Components/Header/Header'
 import { Route, Routes } from 'react-router-dom'
 import Footer from './Components/Footer/Footer'
 import Sidebar from './Components/Sidebar/Sidebar';
@@ -9,11 +8,12 @@ import Settings from './Components/Settings/Settings';
 import DialogsContainer from './Components/Dialogs/DialogsContainer';
 import UsersContainer from './Components/Users/UsersContainer';
 import ProfileContainer from './Components/Profile/ProfileContainer';
+import HeaderContainer from './Components/Header/HeaderContainer';
 
 function App(props) {
     return (
             <div className="App">
-                <Header />
+                <HeaderContainer />
                 <Sidebar />
                 <main className='App__main'>
                     <Routes>

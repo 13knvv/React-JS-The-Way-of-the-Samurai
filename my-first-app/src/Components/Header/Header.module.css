@@ -2,4 +2,18 @@
     background-color: #1D94CF;
     grid-area: header;
     border-radius: 0 0 0.8em 0.8em;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.header__login {
+    position: absolute;
+    right: 2em;
+}
+
+.header__login a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
 }

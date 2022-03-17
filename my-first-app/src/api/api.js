@@ -12,10 +12,7 @@ export const usersAPI = {
     getUsers(currentPage = 1, pageSize = 5) {
         return axiosBase.get(`/users?page=${currentPage}&count=${pageSize}`)
             .then(response => response.data)
-    }
-}
-
-export const followAPI = {
+    },
 
     unfollow(userId) {
         return axiosBase.delete(`/follow/${userId}`)
@@ -25,16 +22,15 @@ export const followAPI = {
     follow(userId) {
         return axiosBase.post(`/follow/${userId}`)
             .then(response => response.data)
-    }
-}
-
-export const profileAPI = {
+    },
 
     getProfile(userId) {
         return axiosBase.get(`/profile/${userId}`)
             .then(response => response.data)
-    }
+    },
 }
+
+
 
 export const authAPI = {
 

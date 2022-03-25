@@ -9,7 +9,7 @@ function Sidebar() {
         <div className={s.sidebar}>
             <ul>
                 <li><NavLink className = { navData => navData.isActive ? s.navLink_Active : s.navLink }  to={`/profile/`}>Profile</NavLink></li>
-                <li><NavLink className = { navData => navData.isActive ? s.navLink_Active  : s.navLink } to="/messages">Messages</NavLink></li>
+                <li><NavLink className = { navData  => navData.isActive ? s.navLink_Active  : s.navLink } to="/messages">Messages</NavLink></li>
                 <li><NavLink className = { navData => navData.isActive ? s.navLink_Active : s.navLink } to="/news">News</NavLink></li>
                 <li><NavLink className = { navData => navData.isActive ? s.navLink_Active : s.navLink } to="/music">Music</NavLink></li>
                 <li><NavLink className = { navData => navData.isActive ? s.navLink_Active : s.navLink } to="/settings">Settings</NavLink></li>

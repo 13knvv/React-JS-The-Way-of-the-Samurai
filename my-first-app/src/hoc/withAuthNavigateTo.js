@@ -13,8 +13,8 @@ let withAuthNavigateTo = (Component) => {
             return <Component {...this.props} />
         }
     }
-    let ConnectedWithAuthNavigateTo = connect(mapStateToPropsForNavigate)(NavigateComponent)
-     return ConnectedWithAuthNavigateTo
+    return connect(mapStateToPropsForNavigate)(NavigateComponent)
+      
 }
 
 

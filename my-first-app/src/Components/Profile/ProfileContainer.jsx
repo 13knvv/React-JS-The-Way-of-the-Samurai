@@ -4,6 +4,7 @@ import Profile from './Profile'
 import { getProfile } from '../../redux/profile-reducer'
 import { useMatch } from 'react-router-dom'
 import withAuthNavigateTo from '../../hoc/withAuthNavigateTo'
+import { compose } from 'redux'
 
 class ProfileContainer extends React.Component {
 
@@ -23,14 +24,14 @@ let mapStateToProps = (state) => {
         profile: state.profilePage.profile
     }
 }
-let  AuthNavigateComponent = withAuthNavigateTo(ProfileContainer)
 
 const ProfileURLMatch = (props) => {
     const match = useMatch('/profile/:userId/')
-    return <AuthNavigateComponent {...props} match={match} />
+    return <ProfileContainer {...props} match={match} />
   }
 
+export default compose(
+    connect(mapStateToProps, {getProfile}),
+    withAuthNavigateTo,
+)(ProfileURLMatch)
 
-export default connect(mapStateToProps, {
-    getProfile
-})(ProfileURLMatch)

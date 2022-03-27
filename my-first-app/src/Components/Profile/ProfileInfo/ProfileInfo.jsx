@@ -14,7 +14,7 @@ function ProfileInfo(props) {
             <img className={s.AboutMe__avatar} src={props.profile.photos.large ? props.profile.photos.large : userPhotoInitial} alt="" />
             <div className={s.AboutMe__info}>
                 <h1>{props.profile.fullName}</h1>
-                <ProfileStatus textStatus='status here' />
+                <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
                 <div className={s.AboutMe__contacts}><span>Contacts:</span> {props.profile.aboutMe}</div>
                 {contacts}
             </div>  

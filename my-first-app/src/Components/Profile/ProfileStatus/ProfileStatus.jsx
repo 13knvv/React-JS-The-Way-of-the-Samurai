@@ -5,14 +5,25 @@ class ProfileStatus extends React.Component {
         super(props)
         this.state = {
             editMode: false,
+            status: this.props.status
         }
     }
 
-    chengeEditMode = () => {
-        this.setState((state, props) => ({
-            
-            editMode: !state.editMode
-        }))
+    componentDidMount() {
+        this.setState({status: this.props.status})
+    }
+
+    onEditMode = () => {
+        this.setState({editMode: true})
+    }
+
+    offEditMode = () => {
+        this.setState({editMode: false})
+        this.props.updateStatus(this.state.status)
+    }
+
+    onChangeStatus = (e) => {
+        this.setState({status: e.target.value})
     }
 
     render() {
@@ -21,13 +32,14 @@ class ProfileStatus extends React.Component {
                 {this.state.editMode ?
                 <div>
                     <input type="text"
-                            value={this.props.textStatus}
+                            value={this.state.status}
                             autoFocus={true}
-                            onBlur={this.chengeEditMode}  />
+                            onBlur={this.offEditMode}
+                            onChange={this.onChangeStatus}  />
                 </div>
                 :
-                <div onClick={this.chengeEditMode}>
-                    {this.props.textStatus}
+                <div onClick={this.onEditMode}>
+                    {this.props.status ? this.props.status : 'status'}
                 </div>}
             </>
         )

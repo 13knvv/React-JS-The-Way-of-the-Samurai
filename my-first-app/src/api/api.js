@@ -24,13 +24,26 @@ export const usersAPI = {
             .then(response => response.data)
     },
 
+}
+
+export const profileAPI = {
     getProfile(userId) {
         return axiosBase.get(`/profile/${userId}`)
             .then(response => response.data)
     },
+
+    getStatus(userId) {
+        
+        return axiosBase.get(`/profile/status/${userId}`)
+            .then(response => response.data)
+            
+    },
+
+    updateStatus(status) {
+        return axiosBase.put(`/profile/status`, { status: status})
+        .then(response => response.data)
+    }
 }
-
-
 
 export const authAPI = {
 

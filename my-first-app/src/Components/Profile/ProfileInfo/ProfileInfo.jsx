@@ -1,5 +1,6 @@
 import s from './ProfileInfo.module.css'
 import userPhotoInitial from '../../../assets/images/userPhotoInitial.png'
+import ProfileStatus from '../ProfileStatus/ProfileStatus'
 
 function ProfileInfo(props) {
 
@@ -13,7 +14,8 @@ function ProfileInfo(props) {
             <img className={s.AboutMe__avatar} src={props.profile.photos.large ? props.profile.photos.large : userPhotoInitial} alt="" />
             <div className={s.AboutMe__info}>
                 <h1>{props.profile.fullName}</h1>
-                <div><span>About Me:</span> {props.profile.aboutMe}</div>
+                <ProfileStatus textStatus='status here' />
+                <div className={s.AboutMe__contacts}><span>Contacts:</span> {props.profile.aboutMe}</div>
                 {contacts}
             </div>  
         </div>
